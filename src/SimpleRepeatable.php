@@ -91,7 +91,7 @@ class SimpleRepeatable extends Field
      * @param $model
      * @param $attribute
      */
-    protected function fillAttributeFromRequest(NovaRequest $request, string $requestAttribute, object $model, string $attribute)
+    protected function fillAttributeFromRequest(NovaRequest $request, $requestAttribute, $model, $attribute)
     {
         $value = $request->input($requestAttribute) ?? null;
         $value = json_decode($value, true);
@@ -103,7 +103,7 @@ class SimpleRepeatable extends Field
         $model->{$attribute} = $value;
     }
 
-    public function fill(NovaRequest $request, object $model)
+    public function fill(NovaRequest $request, $model)
     {
         if (get_class($model) === 'Whitecube\NovaFlexibleContent\Layouts\Layout') {
             $value = $request->input($this->attribute) ?? null;
@@ -154,7 +154,7 @@ class SimpleRepeatable extends Field
      * @param string|null $attribute
      * @return void
      */
-    public function resolve($resource, ?string $attribute = null): void
+    public function resolve($resource, $attribute = null): void
     {
         $novaRequest = app()->make(NovaRequest::class);
         $resolveForDisplay = $novaRequest->isResourceIndexRequest() || $novaRequest->isResourceDetailRequest();
