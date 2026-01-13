@@ -5,6 +5,58 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 19-08-2025
+
+### Added
+
+- Added support for Nova 5.0 (thanks to [@tmannherz](https://github.com/tmannherz))
+- Automatically add min amount of rows when minRows is set (thanks to [@nurmuhammet-ali](https://github.com/nurmuhammet-ali))
+
+### Changed
+
+- Updated packages
+
+## [2.2.3] - 15-02-2024
+
+### Changed
+
+- Allow specifying field custom width using `->withMeta(['nsrWidth' => '60px'])`
+- Updated packages
+
+## [2.2.2] - 17-10-2023
+
+### Changed
+
+- Currently disabled any logic regarding to FormData update. Needs more thorough testing for it to be stable.
+
+## [2.2.1] - 20-09-2023
+
+### Added
+
+- `json()` method to field that allows sending data in JSON format instead FormData.
+
+### Fixed
+
+- Validation error display when one or more rows were deleted. [Issue description](https://github.com/outl1ne/nova-simple-repeatable/issues/52)
+- Fixed dark mode recognition
+- Fixed UI misalignment issues
+
+## [2.2.0] - 03-07-2023
+
+### Added
+
+- Return type annotations for some methods that are now required by Nova.
+
+### Changed
+
+- Format that data is sent to Nova is now FormData instead of JSON.
+
+### Fixed
+
+- Fixed sorting of locales present for field inside repeater.
+- Fixed unique attribute names to match validation errors returned by Nova.
+- Fixed asterisk display for required fields.
+
 ## [2.1.0] - 21-07-2022
 
 ### Added
