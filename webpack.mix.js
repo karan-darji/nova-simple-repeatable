@@ -11,11 +11,9 @@ mix
   .webpackConfig({
     externals: {
       vue: 'Vue',
+      'laravel-nova': 'LaravelNova',
     },
     output: {
       uniqueName: 'outl1ne/nova-simple-repeatable',
     },
-  })
-  .alias({
-    'laravel-nova': path.join(__dirname, 'vendor/laravel/nova/resources/js/mixins/packages.js'),
   });
